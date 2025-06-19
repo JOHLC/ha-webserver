@@ -1,13 +1,9 @@
-#!/usr/bin/with-contenv bashio
+#!/usr/bin/with-contenv bash
 # Serve HTML files for Home Assistant Webserver Addon with Ingress support
 
-# Use /data or /config/www as the web root
 WEB_ROOT="/data"
-if [ ! -d "$WEB_ROOT" ]; then
-  WEB_ROOT="/config/www"
-fi
+[ ! -d "$WEB_ROOT" ] && WEB_ROOT="/config/www"
 
-# Use the port provided by Home Assistant for ingress
 PORT=${INGRESS_PORT:-8080}
 
 cd "$WEB_ROOT"
