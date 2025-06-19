@@ -3,7 +3,8 @@ FROM $BUILD_FROM
 
 RUN apk add --no-cache python3 py3-pip
 
-COPY run.sh /etc/services.d/webserver/run
-RUN chmod +x /etc/services.d/webserver/run
+COPY run.sh /run.sh
+RUN chmod +x /run.sh
 
+CMD ["/run.sh"]
 EXPOSE 8080
