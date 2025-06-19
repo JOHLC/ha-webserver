@@ -9,10 +9,7 @@ arch:
   - armv7
   - aarch64
 map:
-  - config:rw
-  - ssl:ro
-  - www:rw
-  - data:rw
+  - addon_config:rw
 ingress: true
 ingress_port: 8080
 init: false
