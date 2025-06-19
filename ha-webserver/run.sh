@@ -1,5 +1,5 @@
-#!/usr/bin/with-contenv bash
-# Serve HTML files for Home Assistant Webserver Addon with Ingress support
+#!/bin/sh
+# Serve HTML files for Home Assistant Webserver Addon
 
 WEB_ROOT="/data"
 [ ! -d "$WEB_ROOT" ] && WEB_ROOT="/config/www"
